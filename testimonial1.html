@@ -3,20 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Testimonials</title>
+    <title>Batch 3 Portfolio - Testimonials</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding-top: 110px;
+            padding-bottom: 70px;
             background: url('profile/bg.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
-        /* Dark Overlay to improve readability */
+        /* FIXED MARQUEE */
+        .top-marquee {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10000;
+            background: #0d6efd;
+            color: white;
+            font-weight: bold;
+            padding: 3px;
+            font-size: 14px;
+        }
+
+        /* FIXED NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 28px;
+            width: 100%;
+            z-index: 9999;
+            border-radius: 0;
+        }
+
+        /* FIXED FOOTER */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        /* Overlay (your code unchanged) */
         .overlay {
-            background: rgba(255, 255, 255, 0.85); /* Adjust opacity here */
+            background: rgba(255, 255, 255, 0.85);
             min-height: 100vh;
             padding: 20px;
         }
@@ -45,31 +80,14 @@
             animation: slideIn 0.8s forwards;
         }
 
-        .testimonial:nth-child(2) {
-            animation-delay: 0.3s;
-        }
-
-        .testimonial:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
-        .testimonial:nth-child(4) {
-            animation-delay: 0.9s;
-        }
-
-        .testimonial:nth-child(5) {
-            animation-delay: 1.2s;
-        }
-
-        .testimonial:nth-child(6) {
-            animation-delay: 1.5s;
-        }
+        .testimonial:nth-child(2) { animation-delay: 0.3s; }
+        .testimonial:nth-child(3) { animation-delay: 0.6s; }
+        .testimonial:nth-child(4) { animation-delay: 0.9s; }
+        .testimonial:nth-child(5) { animation-delay: 1.2s; }
+        .testimonial:nth-child(6) { animation-delay: 1.5s; }
 
         @keyframes slideIn {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         .avatar {
@@ -80,107 +98,125 @@
             object-fit: cover;
         }
 
-        .testimonial-content {
-            flex: 1;
-        }
-
-        .name {
-            font-weight: bold;
-            color: #007bff;
-            margin-bottom: 5px;
-        }
-
-        .content {
-            color: #333;
-        }
+        .testimonial-content { flex: 1; }
+        .name { font-weight: bold; color: #007bff; }
+        .content { color: #333; }
     </style>
 </head>
 
 <body>
-    <div class="overlay">  <!-- Wrapped content inside the overlay -->
 
-        <h1>Project Learning Testimonials</h1>
+<!-- 🔵 MARQUEE -->
+<marquee class="top-marquee">
+🚀 Welcome to Batch 3 Portfolio | Testimonials 🚀
+</marquee>
 
-        <div class="testimonial-container">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="index.html">Batch 3</a>
 
-            <div class="testimonial">
-                <img class="avatar" src="profile/nivash.jpg" alt="Nivash">
-                <div class="testimonial-content">
-                    <div class="name">⭐ Nivash</div>
-                    <div class="content">
-                        Through this DevOps assignment, I gained strong hands-on experience in GitHub workflows,
-                        especially branching, merging, and collaborating in a team repository.
-                        Creating and deploying the web pages helped me understand how version control supports
-                        real-time development.
-                    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link active" href="testimonial1.html">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ORIGINAL CONTENT -->
+<div class="overlay">
+
+    <h1>Project Learning Testimonials</h1>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial">
+            <img class="avatar" src="assets/profile/Nivash.jpg" alt="Nivash">
+            <div class="testimonial-content">
+                <div class="name">⭐ Nivash</div>
+                <div class="content">
+                    Through this DevOps assignment, I gained strong hands-on experience in GitHub workflows,
+                    especially branching, merging, and collaborating in a team repository.
+                    Creating and deploying the web pages helped me understand how version control supports
+                    real-time development.
                 </div>
             </div>
-
-            <div class="testimonial">
-                <img class="avatar" src="profile/fleix.jpg" alt="Fleix">
-                <div class="testimonial-content">
-                    <div class="name">⭐ Fleix</div>
-                    <div class="content">
-                        This project improved my practical understanding of Git commands and working with feature
-                        branches. I also learned how HTML pages are structured and deployed through CI/CD-style steps,
-                        giving me real insight into DevOps practices.
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <img class="avatar" src="profile/pranitha.jpg" alt="Pranitha">
-                <div class="testimonial-content">
-                    <div class="name">⭐ Pranitha</div>
-                    <div class="content">
-                        I learned how to clone repositories, make changes locally, and push updates confidently.
-                        The assignment helped me understand teamwork in Git and how each member contributes using
-                        a structured workflow.
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <img class="avatar" src="profile/vimal.jpg" alt="Vimal">
-                <div class="testimonial-content">
-                    <div class="name">⭐ Vimal</div>
-                    <div class="content">
-                        This project gave me clear knowledge of Git branching strategies and website page creation.
-                        It was a practical way to see how developers collaborate and maintain a clean commit history
-                        while contributing new features.
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <img class="avatar" src="profile/surrendar.jpg" alt="Surrendar">
-                <div class="testimonial-content">
-                    <div class="name">⭐ Surrendar</div>
-                    <div class="content">
-                        Working on this project helped me understand end-to-end DevOps flow — from development to version
-                        control, and finally deployment. I improved my HTML skills and learned how to push code properly
-                        using Git.
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <img class="avatar" src="profile/nivya.jpg" alt="Nivya">
-                <div class="testimonial-content">
-                    <div class="name">⭐ Nivya</div>
-                    <div class="content">
-                        I gained practical exposure to creating website content, publishing updates through GitHub,
-                        and collaborating with the team. This assignment strengthened my knowledge of Git workflow,
-                        especially pull requests & merging.
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div> <!-- END overlay -->
 
+        <div class="testimonial">
+            <img class="avatar" src="assets/profile/Fleix.jpg" alt="Fleix">
+            <div class="testimonial-content">
+                <div class="name">⭐ Fleix</div>
+                <div class="content">
+                    This project improved my practical understanding of Git commands and working with feature
+                    branches. I also learned how HTML pages are structured and deployed through CI/CD-style steps,
+                    giving me real insight into DevOps practices.
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <img class="avatar" src="assets/profile/pranitha.jpg" alt="Pranitha">
+            <div class="testimonial-content">
+                <div class="name">⭐ Pranitha</div>
+                <div class="content">
+                    I learned how to clone repositories, make changes locally, and push updates confidently.
+                    The assignment helped me understand teamwork in Git and how each member contributes using
+                    a structured workflow.
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <img class="avatar" src="assets/profile/vimal.jpg" alt="Vimal">
+            <div class="testimonial-content">
+                <div class="name">⭐ Vimal</div>
+                <div class="content">
+                    This project gave me clear knowledge of Git branching strategies and website page creation.
+                    It was a practical way to see how developers collaborate and maintain a clean commit history
+                    while contributing new features.
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <img class="avatar" src="assets/profile/surrendar.jpg" alt="Surrendar">
+            <div class="testimonial-content">
+                <div class="name">⭐ Surrendar</div>
+                <div class="content">
+                    Working on this project helped me understand end-to-end DevOps flow — from development to version
+                    control, and finally deployment. I improved my HTML skills and learned how to push code properly
+                    using Git.
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <img class="avatar" src="assets/profile/nivya.jpg" alt="Nivya">
+            <div class="testimonial-content">
+                <div class="name">⭐ Nivya</div>
+                <div class="content">
+                    I gained practical exposure to creating website content, publishing updates through GitHub,
+                    and collaborating with the team. This assignment strengthened my knowledge of Git workflow,
+                    especially pull requests & merging.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+    © 2025 Batch 3. All Rights Reserved.
+</footer>
 
 </body>
-
 </html>
